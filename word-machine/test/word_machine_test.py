@@ -1,5 +1,5 @@
 import unittest
-from word_machine import WordMachine
+from ..word_machine import WordMachine
 
 word_machine = WordMachine()
 class WordMachineTest(unittest.TestCase):
