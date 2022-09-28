@@ -47,7 +47,7 @@ class WordMachine:
         if op == "-":
             self.sub()
             return
-        if op.isnumeric():
+        if op.lstrip("-").isnumeric():
             self.push(int(op))
             return
         if op == "POP":
@@ -63,7 +63,3 @@ class WordMachine:
             self.interpreter(op)
         return self.result
 
-
-word_machine = WordMachine()
-print(word_machine.get_result("4 5 6 - 7 +"))
-print(word_machine.get_result("4 5 6 POP +"))
